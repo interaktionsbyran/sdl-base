@@ -12,7 +12,7 @@ endif
 SDL = -lSDL2
 # If your compiler is a bit older you may need to change -std=c++11 to -std=c++0x
 CXX_FLAGS = -Wall -c -std=c++11
-LD_FLAGS = $(SDL)
+LD_FLAGS = $(SDL) -lmosquitto
 EXE = main
 
 CPP_FILES := $(wildcard src/*.cpp)
