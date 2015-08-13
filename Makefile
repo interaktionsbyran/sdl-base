@@ -1,4 +1,5 @@
 UNAME_S := $(shell uname -s)
+OBJDIR := obj
 
 ifeq ($(UNAME_S),Linux)
 	CCFLAGS += -D LINUX
@@ -23,8 +24,12 @@ all: $(EXE)
 $(EXE): $(OBJ_FILES)
 	$(CXX) -o $@ $^ $(LD_FLAGS)
 
-obj/%.o: src/%.cpp
+obj/%.o: src/%.cpp | $(OBJDIR)
 	$(CXX) $(CXX_FLAGS) -c -o $@ $<
+
+$(OBJDIR):
+	mkdir -p $(OBJDIR)
 
 clean:
 	rm obj/*.o && rm $(EXE)
+
