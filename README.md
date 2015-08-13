@@ -2,7 +2,11 @@
 This a simple SDL2 skeleton that compiles on OSX and Ubuntu. It provides a simple comon base for a programming excerise in C++ to be sent to potential hires. 
 
 ## Task
-This describes requirements.
+Our customer has a sensor connected to some equipment and it publishes sensor data over [mqtt](http://mqtt.org) on `amee.interaktionsbyran.se`. The data arrives on the topic `recruitment/ciot/sensor1` in a comma separated format epoch timestamp and value.
+
+The equipment needs to be woken up now and then in order to send valid data. You can wake it up by posting `1` to the topic `recruitment/ciot/wake`. The wake status is published by the equipment on topic `recruitment/ciot/state`.
+
+We need an application that visualize the incoming data in a nice way with a moving window. Whenever the sensor falls asleep, the app should wake it up again.
 
 ## Setup
 Setting up the project for building should be straight forward if you're familiar with package management on your chosen platform, but just to make sure the instructions are dirt simple.

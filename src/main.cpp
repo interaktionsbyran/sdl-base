@@ -104,7 +104,7 @@ int main(int, char**)
 	SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
 
 	//Attempt mosquitto connection to local host.
-	mosquitto_connect_async(mosq, "localhost", 1883, 60);
+	mosquitto_connect_async(mosq, "amee.interaktionsbyran.se", 1883, 60);
 
 	//Start the mosquitto network thread.
 	if(mosquitto_loop_start(mosq) != MOSQ_ERR_SUCCESS) {
