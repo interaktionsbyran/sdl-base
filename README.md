@@ -1,4 +1,4 @@
-# SDL Skeleton
+# SDL Skeletons
 This a simple SDL2 skeleton that compiles on OSX and Ubuntu. It provides a simple comon base for a programming excerise in C++ to be sent to potential hires. 
 
 ## Task
